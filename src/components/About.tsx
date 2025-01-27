@@ -1,4 +1,5 @@
 import React from "react";
+import '../styles/About.css';
 
 interface aboutProps {
     
@@ -23,12 +24,14 @@ const About:React.FC<aboutProps> = () => {
   return (
     <div>
         <h1>About</h1>
-        {fetchData.map((data) => (
-            <div key={data.id}>
-                <h3>{data.title}</h3>
-                <p>{data.body}</p>
-            </div>
-        ))}
+        <div className="grid-container">
+            {fetchData.map((data) => (
+                <div key={data.id} className="grid-item">
+                    <h3>{data.title}</h3>
+                    <p>{data.body}</p>
+                </div>
+            ))}
+        </div>
     </div>
   );
 };
