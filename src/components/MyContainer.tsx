@@ -1,15 +1,20 @@
 import React from "react";
+import { useTranslation } from "react-i18next";
 
 interface MyContainerProps {
 
 }
 
 const MyContainer:React.FC<MyContainerProps> = () => {
-  return (
-    <div>
-    This is some random text inside the Header component.3
-    </div>
-  );
+    const { t } = useTranslation();
+
+
+
+    return (
+        <div>
+        {t('This is the front page')}
+        </div>
+    );
 };
 
 export default MyContainer;

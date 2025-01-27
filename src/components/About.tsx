@@ -23,14 +23,12 @@ const About:React.FC<aboutProps> = () => {
   return (
     <div>
         <h1>About</h1>
-        <ul>
-            {fetchData.map((data) => (
-                <div key={data.id}>
-                    <h3>{data.title}</h3>
-                    <p>{data.body}</p>
-                </div>
-            ))}
-        </ul>
+        {fetchData.map((data) => (
+            <div key={data.id}>
+                <h3>{data.title}</h3>
+                <p>{data.body}</p>
+            </div>
+        ))}
     </div>
   );
 };
