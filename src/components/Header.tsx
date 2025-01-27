@@ -1,14 +1,22 @@
 import React from "react";
 
 interface headerProps {
-    
+    name?: string;
 }
 
-const Header:React.FC<headerProps> = () => {
+const Header:React.FC<headerProps> = ({name}) => {
   return (
-    <div>
-    This is some random text inside the Header component.2
-    </div>
+    <header className="header">
+        <h1>{name ? name : "Default Title"}</h1>
+        <nav className="nav">
+            <ul className="nav_list">
+                <li><a href="/">Home</a></li>
+                <li><a href="/about">About</a></li>
+            </ul>
+            <button>FI</button>
+            <button>EN</button>
+        </nav>
+    </header>
   );
 };
 
