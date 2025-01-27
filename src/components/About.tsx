@@ -13,6 +13,7 @@ const About:React.FC<aboutProps> = () => {
     }
 
     const [fetchData, setFetchData] = React.useState<Post[]>([]);
+    const [loadCount, setLoadCount] = React.useState(12);
 
     React.useEffect(() => {
         fetch(`https://jsonplaceholder.typicode.com/posts`)
@@ -25,13 +26,14 @@ const About:React.FC<aboutProps> = () => {
     <div>
         <h1>About</h1>
         <div className="grid-container">
-            {fetchData.map((data) => (
+            {fetchData.slice(0,loadCount).map((data) => (
                 <div key={data.id} className="grid-item">
                     <h3>{data.title}</h3>
                     <p>{data.body}</p>
                 </div>
             ))}
         </div>
+        <button onClick={() => setLoadCount(loadCount+12)}>Show more</button>
     </div>
   );
 };
