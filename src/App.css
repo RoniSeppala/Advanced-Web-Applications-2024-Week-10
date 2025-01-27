@@ -40,3 +40,27 @@
 .read-the-docs {
   color: #888;
 }
+
+.header {
+  display: flex;
+  flex-direction: row;
+}
+
+.nav {
+  justify-content: center;
+  display: flex;
+  flex-direction: row;
+  gap: 1em;
+}
+
+.nav_list {
+  display: flex;
+  flex-direction: row;
+}
+
+.nav_list > *{
+  display: flex;
+  flex-direction: row;
+  gap: 1em;
+  padding: 1em;
+}
