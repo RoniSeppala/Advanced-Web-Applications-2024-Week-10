@@ -2,6 +2,9 @@ import { useState } from 'react'
 import reactLogo from './assets/react.svg'
 import viteLogo from '/vite.svg'
 import './App.css'
+import About from './components/About'
+import Header from './components/Header'
+import MyContainer from './components/MyContainer'
 
 function App() {
   const [count, setCount] = useState(1)
@@ -27,6 +30,9 @@ function App() {
       </div>
       <p className="read-the-docs">
         Click on the Vite and React logos to learn more
+        <About />
+        <Header />
+        <MyContainer />
       </p>
     </>
   )
